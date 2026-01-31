@@ -8,12 +8,9 @@
 
 body {
   margin: 0;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
+  background-color: #fcfcfc;
 }
 /* ////////////////////////////////////// */
 
@@ -57,9 +54,11 @@ body {
   text-decoration: none;
   color: #000;
   font-weight: 500;
+  border-bottom: 2px solid transparent;
 }
 .main-nav a:hover {
-  text-decoration: underline;
+  color: #913434;
+  border-bottom-color: #913434;
 }
 
 /* Menu burger */
@@ -75,9 +74,9 @@ body {
 /* ////////////////////////////////////// */
 /* Main */
 .container {
-  max-width: 1200px; /* largeur max desktop */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem; /* goutières */
+  padding: 0 2rem;
 }
 
 h1 {
@@ -91,13 +90,12 @@ h1 {
   list-style: none;
   padding: 0;
   margin: 0;
-
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
-/* Exercices sur 2 colonnes */
+/* Liste des exercices sur 2 colonnes (si ce n'est pas en version mobile) */
 @media (min-width: 768px) {
   .exercices-list {
     grid-template-columns: repeat(2, 1fr);
@@ -105,16 +103,15 @@ h1 {
 }
 
 /* Chaque exercice à sa "carte" */
-.exercice-card {
-  border: 1px solid #e5e5e5;
+.card {
+  border: 1px solid #c9c9c9;
   border-radius: 8px;
   padding: 1.5rem;
-
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
   background-color: #fff;
+  box-shadow: 0 0 3px 0 #913434;
 }
 
 .exercices {
@@ -125,21 +122,23 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-.exercice-card h3 {
+.card h3 {
   margin: 0;
 }
 
-.exercice-card p {
+.card p {
   margin: 0;
   color: #555;
+  font-weight: 500;
 }
 
 /* Liens */
 .links {
   margin-top: auto;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
+  padding-top: 20px;
 }
 
 .links a {
@@ -147,11 +146,12 @@ h1 {
   font-size: 0.9rem;
   font-weight: 500;
   color: #000;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
 .links a:hover {
-  border-bottom-color: #000;
+  color: #913434;
+  border-bottom-color: #913434;
 }
 
 /* Section - Projet Nuxt */
@@ -165,7 +165,7 @@ h1 {
   max-width: 100%;
   width: 1200px;
   border-radius: 8px;
-  border: 1px solid #e5e5e5;
+  border: 3px solid #000000;
 }
 
 /* ////////////////////////////////////// */
@@ -190,7 +190,7 @@ h1 {
   }
 
   .container {
-    padding: 0 1.25rem; /* goutières */
+    padding: 0 1.25rem;
   }
 
   .burger {
@@ -202,18 +202,12 @@ h1 {
     position: fixed;
     inset: 0;
     background: #fff;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* état fermé */
     opacity: 0;
     pointer-events: none;
-
-    /* PAS de transition ici */
     transition: none;
-
     z-index: 1000;
   }
   .main-nav ul {
