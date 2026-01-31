@@ -5,65 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="/assets/js/script.js" defer></script>
 
     <title>Web Design</title>
   </head>
+
   <body>
-    <header>
-      <h1>Web Design - CHRISTMANN Victor</h1>
-      <p>
-        Ensemble d'exercices réalisés en HTML / CSS avec une explication
-        détaillée du raisonnement pour chacun.
-      </p>
+    <!-- Header (menu) -->
+    <header class="header">
+      <div class="header-container">
+        <!-- Mes informations -->
+        <div class="etudiant-info">
+          <p>Victor CHRISTMANN</p>
+        </div>
+
+        <!-- Menu de navigation -->
+        <nav class="main-nav">
+          <ul>
+            <li>
+              <a href="pages/exercice-1/index.html" target="_blank"
+                >Exercice 1</a
+              >
+            </li>
+            <li>
+              <a href="pages/exercice-2/index.html" target="_blank"
+                >Exercice 2</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://galerie-interactive-victor-christmann.vercel.app/"
+                target="_blank"
+                >Projet Nuxt</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <button class="burger" aria-label="Menu">☰</button>
+      </div>
     </header>
 
-    <main>
-      <section>
+    <!-- Main -->
+    <main class="container">
+      <!-- Titre de la page -->
+      <h1>Web Design - Mes projets réalisés lors de la semaine intensive</h1>
+
+      <!-- Exercices -->
+      <section class="exercices">
+        <!-- Exercice 1 -->
         <h2>Les Exercices Réalisés</h2>
-        <ul>
-          <li>
+        <ul class="exercices-list">
+          <li class="exercice-card">
             <h3>Exercice 1</h3>
-            <a href="pages/exercice-1/index.html">Voir l'exercice</a>
-            |
-            <a href="pages/exercice-1/README.md">Voir le raisonnement</a>
+            <p>Explication rapide de l'objectif de l'exercice.</p>
+
+            <div class="links">
+              <a href="pages/exercice-1/index.html">Voir l'exercice</a>
+              <a href="pages/exercice-1/README-ex1.pdf" download>
+                En savoir plus (PDF)
+              </a>
+            </div>
           </li>
 
-          <li>
+          <!-- Exercice 2 -->
+          <li class="exercice-card">
             <h3>Exercice 2</h3>
-            <a href="pages/exercice-2/index.html">Voir l'exercice</a>
-            |
-            <a href="pages/exercice-2/README.md">Voir le raisonnement</a>
-          </li>
+            <p>Explication rapide de l'objectif de l'exercice.</p>
 
-          <li>
-            <h3>Exercice 3</h3>
-            <a href="pages/exercice-3/index.html">Voir l'exercice</a>
-            |
-            <a href="pages/exercice-3/README.md">Voir le raisonnement</a>
-          </li>
-
-          <li>
-            <h3>Exercice 4</h3>
-            <a href="pages/exercice-4/index.html">Voir l'exercice</a>
-            |
-            <a href="pages/exercice-4/README.md">Voir le raisonnement</a>
+            <div class="links">
+              <a href="pages/exercice-2/index.html">Voir l'exercice</a>
+              <a href="pages/exercice-2/README-ex2.pdf" download>
+                En savoir plus (PDF)
+              </a>
+            </div>
           </li>
         </ul>
       </section>
 
-      <section>
-        <h2>Modification : Projet Nuxt</h2>
-        <a
-          href="https://galerie-interactive-victor-christmann.vercel.app/"
-          target="_blank"
-        >
-          Voir le projet en ligne
-        </a>
+      <!-- Projet Nuxt -->
+      <section class="projet-nuxt">
+        <h2>Projet Nuxt mis en ligne</h2>
+        <p>
+          Projet déployer via Nuxt, Vercel & Supabase (et légèrement modifié)
+        </p>
+
+        <img
+          src="/assets/images/nuxt/home-nuxt.png"
+          alt="Aperçu du projet Nuxt"
+          class="nuxt-home-img"
+        />
+
+        <p>
+          <a href="pages/nuxt/README-nuxt.pdf" download>
+            En savoir plus (PDF)
+          </a>
+        </p>
       </section>
     </main>
 
-    <footer>
-      <p>© 2026</p>
+    <!-- Footer (copyright) -->
+    <footer class="footer">
+      <p>CHRISTMANN Victor - Master CEN - ©2026</p>
     </footer>
   </body>
 </html>

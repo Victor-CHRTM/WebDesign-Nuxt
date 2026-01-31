@@ -1,0 +1,21 @@
+body {
+  margin: 30px;
+  background-image: url("../../assets/images/exercice-2/bg.png");
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.fable {
+  display: block;
+  margin: 30px auto;
+  padding: 30px 30px;
+  background-color: #ffffff;
+  border: 1px solid #b9b9b9;
+  width: 500px;
+  font-style: italic;
+}
+
+.fable .majuscule {
+  font-size: 40px;
+  font-weight: bold;
+}
